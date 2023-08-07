@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>UGEE签批服务页面</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/index.js"></script>
+
+</head>
+
+<body onload="signclick()">
+<div id="maindiv">
+  <div id="titlediv">
+	<img id="logo" src="image/logo.png" />
+	<div class="titleLabel">HANVON UGEE 签批服务页面</div>
+  </div>
+  <div id="contentdiv">
+    <div id="leftdiv">
+		<div id="sign" onclick="signclick()">
+		<img id="signImage" src="image/sign.png" /> 
+		<div id="signlabel">
+			原笔迹签字
+		</div>
+		</div>
+		
+		<div id="finger" onclick="fingerclick()">
+		<img id="signImage" src="image/finger.png" /> 
+		<div id="signlabel">
+			指纹捺印
+		</div>
+		</div>
+
+		<div id="sfinger" onclick="sfingerclick()">
+		<img id="signImage" src="image/signfinger.png" /> 
+		<div id="signlabel">
+			原笔迹指纹捺印
+		</div>
+		</div>
+	</div>
+    <div id="rightdiv">
+		<div id="signcontent">
+						
+		</div>
+	</div>
+
+  </div>
+</div>
+</body>
+</html>

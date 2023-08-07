@@ -1,0 +1,124 @@
+
+html,body{
+	width: 100%;
+	height: 100%;
+	min-width:1300px;
+	}
+#maindiv {
+	background-color: #00CC66;
+	width:100%;
+	height:100%;
+
+}
+#titlediv {
+	background-color: #A50A0A;
+	width:100%;
+	height:10%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+	 .titleLabel
+	{		
+		font-size:30px;
+		color:white;
+		font-family:Arial,Helvetica,sans-serif;
+		font-weight:800
+	}
+	#logo{
+		position:absolute;
+		left:80px;
+
+	}
+
+#contentdiv
+{
+	background-color: #CC6600;
+	width:100%;
+	height:90%;
+}
+
+#leftdiv
+{
+	background-color:#A50A0A;
+	width:20%;
+	height:100%;
+	float:left;
+	display:inline-block;
+	min-height:700px;
+}
+#sign{
+	vertical-align: middle;
+	background-color:#A9A9A9;
+	height:15%;	
+	justify-content:center;
+	align-items:center;
+}
+	#signImage{
+		width:20%;
+		height:40%;
+		float:left;
+		display:inline-block;
+		/* margin:20px 5px 5px 65px; */
+		margin: 10% 1% 1% 13%;
+	
+	}
+	#signlabel{
+		font-size:1.25rem;
+		color:white;
+		font-family:Arial,Helvetica,sans-serif;
+		font-weight:800	;
+		float:left;
+		display:inline-block;
+		/* margin:45px 15px 20px 8px; */
+		margin: 13% 10% 10% 1%;
+	
+	}
+
+
+#camera{
+	vertical-align: middle;
+	background-color:#A50A0A;
+	height:15%;
+	margin:5px 0px;	
+}
+
+#IDcard{
+	vertical-align: middle;
+	background-color:#A50A0A;
+	margin:10px 0px;
+	height:15%;
+	margin:5px 0px;
+}
+
+#finger{
+	vertical-align: middle;
+	background-color:#A50A0A;
+	height:15%;
+}
+
+#sfinger{
+	vertical-align: middle;
+	background-color:#A50A0A;
+	height:15%;
+}
+#evaluate{
+	vertical-align: middle;
+	background-color:#A50A0A;
+	height:15%;
+}
+
+#rightdiv
+{
+	background-color:#ECECEC;
+	width:80%;
+	height:100%;
+	display:inline-block;
+	float:left;
+}
+#signcontent{
+	width:100%;
+	height:100%;
+}
+
+	

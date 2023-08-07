@@ -1,0 +1,76 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Apache.NMS/1.8.0": {
+        "runtime": {
+          "lib/netstandard2.0/Apache.NMS.dll": {
+            "assemblyVersion": "1.8.0.0",
+            "fileVersion": "1.8.0.0"
+          }
+        }
+      },
+      "Apache.NMS.ActiveMQ/1.8.0": {
+        "dependencies": {
+          "Apache.NMS": "1.8.0",
+          "System.Runtime": "4.3.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Apache.NMS.ActiveMQ.dll": {
+            "assemblyVersion": "1.8.0.0",
+            "fileVersion": "1.8.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.1": {},
+      "Microsoft.NETCore.Targets/1.1.3": {},
+      "System.Runtime/4.3.1": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Targets": "1.1.3"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Apache.NMS/1.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kN2PzpT4YLseq0SRPfI0BKZ17PlkVwBUyug1KtauoVHe4QALSIlUCW8rkB/1kPpDCjvRF093FEEVGmMUhPhSew==",
+      "path": "apache.nms/1.8.0",
+      "hashPath": "apache.nms.1.8.0.nupkg.sha512"
+    },
+    "Apache.NMS.ActiveMQ/1.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YK8PGOjLWtQfT1I26so7Vg7+epDN3bTLDUti6P8sVZJ32SipG4ZZMFe8YpQck86WMQB3nL8avJzCovXW4+KzYA==",
+      "path": "apache.nms.activemq/1.8.0",
+      "hashPath": "apache.nms.activemq.1.8.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TMBuzAHpTenGbGgk0SMTwyEkyijY/Eae4ZGsFNYJvAr/LDn1ku3Etp3FPxChmDp5HHF3kzJuoaa08N0xjqAJfQ==",
+      "path": "microsoft.netcore.platforms/1.1.1",
+      "hashPath": "microsoft.netcore.platforms.1.1.1.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ==",
+      "path": "microsoft.netcore.targets/1.1.3",
+      "hashPath": "microsoft.netcore.targets.1.1.3.nupkg.sha512"
+    },
+    "System.Runtime/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-abhfv1dTK6NXOmu4bgHIONxHyEqFjW8HwXPmpY9gmll+ix9UNo4XDcmzJn6oLooftxNssVHdJC1pGT9jkSynQg==",
+      "path": "system.runtime/4.3.1",
+      "hashPath": "system.runtime.4.3.1.nupkg.sha512"
+    }
+  }
+}

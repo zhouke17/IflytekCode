@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+  <version>2.1.0.0</version>
+  <url>http://172.31.97.233:88/group1/M00/07/70/rB9h6WNrNQuAaizRAAWknkYIuyE661.zip</url>
+  <changelog>v2.1.0.0.html</changelog>
+  <checksum algorithm="MD5">21cbb8c0ecbf523b8d75004540b79ccc</checksum>
+  <!--<mandatory>true</mandatory>--><!--只保留更新和关闭窗体的按钮 -->
+  <!--<mandatory mode="1">true</mandatory>--><!--只保留更新按钮 -->
+  <!--<mandatory mode="2">true</mandatory>--><!--不出现提示更新的弹框，直接更新 -->
+ <!--<mandatory minVersion="1.2.0.0">true</mandatory>-->
+</item>

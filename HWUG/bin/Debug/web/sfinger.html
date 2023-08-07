@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title>电子签名法</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/law.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/sign.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript">
+	var wsUri = "ws://localhost:12100/pc";
+	var websocket = null;
+	var signFUrl = "";
+    var isOpenUrl = false;
+	window.onload = initWebSocket();
+	function initWebSocket() {
+		initUrl();
+		try {
+			if ( websocket && websocket.readyState == 1 ){
+				console.log("websocket close");
+				websocket.close();
+			}
+
+			websocket = new WebSocket( wsUri );
+			websocket.onopen = function (evt) {
+
+			};
+
+			websocket.onclose = function (evt) {
+			};
+			websocket.onmessage = function (evt) {
+				console.log( "Message received :", evt.data );
+
+				var obj = JSON.parse(evt.data); 
+				if("signbase64" == obj.typename){	
+				   document.getElementById('signImage').src='data:image/jpg;base64,'+obj.message;
+				   // 发送采集指纹命令
+				    var str1="{\"typename\":\"startfinger\",\"message\":{\"left\":\""+340+"\",\"top\":\""+250+"\",\"width\":\""+600+"\",\"height\":\""+300
+					+"\",\"quality\":\""+100+"\",\"flag\":\""+1+"\"}}";
+		        
+					websocket.send(str1);
+					console.log( "string sent :", '"'+str1+'"' );
+				}else if(obj.typename=="fingerbase64"){
+				}else if(obj.typename=="signfbase64"){
+					document.getElementById('signImage').src='data:image/jpg;base64,'+ obj.message;
+					var str1="{\"typename\":\"closewindow\"}";
+					websocket.send(str1);
+					}else if("cancel" == obj.typename){
+							alert("取消签字");
+					}else if("unsign" == obj.typename){
+							alert(obj.message);
+					}
+
+			};
+			websocket.onerror = function (evt) {
+			   
+			};
+		} catch (exception) {
+		   
+		}
+	}
+
+		function stopWebSocket() {
+			if ( websocket != null )
+			{
+				websocket.close();
+			}
+				
+		}
+       
+		function getSFinger()
+		{				  
+		    if ( websocket != null )
+		    {
+				var str1="{\"typename\":\"extendurl\",\"message\":{\"url\":\""+signFUrl+"\"}}";
+				
+				websocket.send(str1);
+				str1 = "{\"typename\":\"startsign\",\"message\":{\"left\":\""+240+"\",\"top\":\""+200+"\",\"width\":\""+600+"\",\"height\":\""+300+"\",\"penwidth\":\""+5+"\"}}";
+		        
+		        websocket.send(str1);
+				
+				isOpenUrl = true;
+				var begin = document.getElementById("signFbegin");
+					begin.disabled=true;
+					begin.style.background="linear-gradient(to bottom, #A9A9A9 0%,#A9A9A9 100%)";
+					begin.style.border="0.2px solid #A9A9A9"
+				var close = document.getElementById("signFclose");
+					close.disabled=false;
+					close.style.background="linear-gradient(to bottom, #A50A0A 0%,#A50A0A 100%)";
+					close.style.border="0.2px solid #A50A0A";
+		    }
+		}
+
+		function closeSFinger(){
+		
+            if ( websocket != null && isOpenUrl){
+			
+				var str1="{\"typename\": \"mouseenable\",\"message\": {\"mod\": \"0\"}}";					
+				websocket.send(str1);
+				
+				var str1="{\"typename\":\"closewindow\"}";
+		        websocket.send(str1);
+				str1="{\"typename\":\"closeurl\",\"message\":{\"url\":\""+signFUrl+"\"}}";
+			
+                websocket.send(str1);
+				isOpenUrl = false;
+				
+				var begin = document.getElementById("signFbegin");
+					begin.disabled=false;
+					begin.style.background="linear-gradient(to bottom, #A50A0A 0%,#A50A0A 100%)";
+					begin.style.border="0.2px solid #A50A0A";
+				var close = document.getElementById("signFclose");
+					close.disabled=true;
+					close.style.background="linear-gradient(to bottom, #A9A9A9 0%,#A9A9A9 100%)";
+					close.style.border="0.2px solid #A9A9A9";
+            }
+		}
+
+    function initUrl(){
+		// 查找签字页面URl
+		 if(location.href.indexOf("file:") == 0){
+			signFUrl = location.href.replace("sfinger.html","law.html");
+		 }else{
+			if(location.href.indexOf("index") != -1){
+			   signFUrl = location.href.replace("sfingner.html","law.html");
+			}else{
+			   signFUrl = location.href+"law.html";
+			}
+		 }
+	}
+    </script>
+
+  </head>
+  <body onunload="closeSFinger()">
+	<div id="frameContent" class="frameContent">
+      <div class="con_bgtiao">
+        <div class="con_bt">xxxx战略合作意向书</div>
+      </div>
+      <div id="content" class="con">
+        <p>
+          <span>
+            <span style="font-family: 楷体, 楷体_GB2312, SimKai;">		甲方是以研发、制造、销售××及××为主的公司，并且拥有完善的销售配套体系和较强的生产经营能力;乙方拥有完善的人际关系和市场开拓能力，能够为甲方提供较好的市场开发支持。现甲、乙双方经友好协商，秉承共同发展、诚信合作的宗旨，达成如下合作协议：
+</span>
+          </span>
+        </p>
+
+        <p style="text-align: center;">
+          <strong>第一章　合作宗旨</strong>
+        </p>
+        <p>　　 
+        <strong>第一条</strong>　甲、乙双方在合作中建立的互信、惯例与默契是商业合作战略伙伴关系的基础，提高效率与共同发展是双方合作的目标和根本宗旨
+</p>
+        <p>　　 
+        <strong>第二条</strong>　本协议的基本原则是自愿、双赢、互惠互利、相互促进、共同发展、保守秘密、相互协作。
+</p>
+        <p>　
+        <strong>　第三条</strong>　充分发挥双方优势，优势互补，提高竞争力，共同开拓市场。
+</p>
+        <p>
+		
+        <p style="text-align: center;">
+          <strong>第二章　合作方式</strong>
+        </p>
+        <p>　　 
+        <strong>第四条</strong>　乙方依据不同客户的实际情况，参加招、投标和报价等;甲方为顺利夺标和获得订单，根据竞争对手、投标、实际订单及自己的实际情况积极配合乙方报出合理的价格和交货期，支持乙方投标和报价。</p>
+        <p>　　 
+        <strong>第五条</strong>　乙方以甲方名义参与的所有项目所签订的合同应由甲方书面确认后方可履行，否则视同无效。</p>
+        <p>　  
+        <strong>　第六条</strong>　甲方针对每个成功交易项目应支付给乙方服务费。服务费根据供货出厂单价和销售单价的差价及实际供货数量计算所得。因此，每个交易项目甲、乙双方将依据实际标的额，另行确认供货价差表。供货价差表为服务费计算的唯一依据。</p> 
+        <p style="text-align: center;">
+          <strong>第三章　甲方义务</strong>
+        </p>
+        <p>　 
+        <strong>　第七条</strong>　甲方负责组织项目合同订单产品的生产和配送，并根据项目订单计划按时按量供应产品。</p>
+
+		<p style="text-align: center;">
+          <strong>第四章　乙方义务</strong>
+        </p>
+        <p>　 
+        <strong>　第八条</strong>　乙方主导各个项目合同的人际公关，自项目接触至其完结，全部与项目有关事宜所产生的公关费用均由乙方承担。</p>
+        <p>
+ 
+        <p style="text-align: center;">
+          <strong>第五章　附　　则</strong>
+        </p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>第九条</strong>　本协议自2015年2月11日起有效。</p>
+      </div>
+      <div class="sign_bgtiao">
+		<div class="timer" style="position: relative;float:left;left:28px;line-height:60px;width:40%;"> 
+			<i style="font-size:1.25rem; Font Family:Courier New;">签 发 日 期:</i>&nbsp;&nbsp;
+			<i><b><u>2015-02-11</u></b></i>
+		</div>
+		<div class="signer" style="	float:left; position: relative;left:200px;line-height:60px;width:40%;">
+			<i style="font-size:1.25rem; Font Family:Courier New;">签 发 人:</i>&nbsp;&nbsp;
+			<image id="signImage" style="width: 60%; border:0;border-style:none;position: absolute; margin-top: -40px; " src=""/>
+		</div>
+		  		
+      </div>
+</div>
+<div class="action">
+<button type="button" id="signFbegin" class="begin" onclick="getSFinger()" style="width:100px; height:30px;">签字按捺</button>
+<button type="button" id="signFclose" class="close" onclick="closeSFinger()" style="width:100px; height:30px;">取消签字按捺</button>
+
+</div>
+  </body>
+</html>

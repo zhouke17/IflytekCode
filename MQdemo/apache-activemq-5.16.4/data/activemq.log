@@ -1,0 +1,71 @@
+2022-04-24 11:15:43,330 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1d16f93d: startup date [Sun Apr 24 11:15:43 CST 2022]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2022-04-24 11:15:46,069 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\kezhou3\Downloads\apache-activemq-5.16.4-bin\apache-activemq-5.16.4\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2022-04-24 11:15:46,346 | INFO  | PListStore:[C:\Users\kezhou3\Downloads\apache-activemq-5.16.4-bin\apache-activemq-5.16.4\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-04-24 11:15:46,655 | INFO  | Apache ActiveMQ 5.16.4 (localhost, ID:kezhou3-50971-1650770146486-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2022-04-24 11:15:46,722 | INFO  | Listening for connections at: tcp://kezhou3:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 11:15:46,729 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 11:15:46,752 | INFO  | Listening for connections at: amqp://kezhou3:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 11:15:46,770 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 11:15:46,847 | INFO  | Listening for connections at: stomp://kezhou3:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 11:15:46,896 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 11:15:46,937 | INFO  | Listening for connections at: mqtt://kezhou3:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 11:15:46,951 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 11:15:46,998 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-04-24 11:15:47,288 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-04-24 11:15:47,640 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@78383390{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2022-04-24 11:15:47,815 | INFO  | Listening for connections at ws://kezhou3:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2022-04-24 11:15:47,817 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 11:15:47,823 | INFO  | Apache ActiveMQ 5.16.4 (localhost, ID:kezhou3-50971-1650770146486-0:1) started | org.apache.activemq.broker.BrokerService | main
+2022-04-24 11:15:47,828 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2022-04-24 11:15:47,849 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Users\kezhou3\Downloads\apache-activemq-5.16.4-bin\apache-activemq-5.16.4\bin\..\data\kahadb only has 35370 mb of usable space. - resetting to maximum available disk space: 35370 mb | org.apache.activemq.broker.BrokerService | main
+2022-04-24 11:15:47,860 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: C:\Users\kezhou3\Downloads\apache-activemq-5.16.4-bin\apache-activemq-5.16.4\bin\..\data only has 35370 mb of usable space. - resetting to maximum available disk space: 35370 mb | org.apache.activemq.broker.BrokerService | main
+2022-04-24 11:15:51,468 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-04-24 11:15:51,472 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-04-24 13:05:39,818 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1d16f93d: startup date [Sun Apr 24 13:05:39 CST 2022]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2022-04-24 13:05:41,379 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[D:\软件\apache-activemq-5.16.4\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2022-04-24 13:05:41,460 | INFO  | Page File: D:\软件\apache-activemq-5.16.4\bin\..\data\kahadb\db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2022-04-24 13:05:41,465 | INFO  | Page File: D:\软件\apache-activemq-5.16.4\bin\..\data\kahadb\db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2022-04-24 13:05:41,468 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2022-04-24 13:05:41,515 | INFO  | PListStore:[D:\软件\apache-activemq-5.16.4\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-04-24 13:05:41,748 | INFO  | Apache ActiveMQ 5.16.4 (localhost, ID:kezhou3-64868-1650776741602-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2022-04-24 13:05:41,868 | INFO  | Listening for connections at: tcp://kezhou3:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 13:05:41,875 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 13:05:41,883 | INFO  | Listening for connections at: amqp://kezhou3:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 13:05:41,888 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 13:05:41,898 | INFO  | Listening for connections at: stomp://kezhou3:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 13:05:41,904 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 13:05:41,915 | INFO  | Listening for connections at: mqtt://kezhou3:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-24 13:05:41,919 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 13:05:41,931 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-04-24 13:05:42,068 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-04-24 13:05:42,265 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@2cc44ad{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2022-04-24 13:05:42,390 | INFO  | Listening for connections at ws://kezhou3:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2022-04-24 13:05:42,392 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2022-04-24 13:05:42,394 | INFO  | Apache ActiveMQ 5.16.4 (localhost, ID:kezhou3-64868-1650776741602-0:1) started | org.apache.activemq.broker.BrokerService | main
+2022-04-24 13:05:42,398 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2022-04-24 13:05:44,815 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-04-24 13:05:44,818 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-04-27 10:50:28,267 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1d16f93d: startup date [Wed Apr 27 10:50:28 CST 2022]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2022-04-27 10:50:29,806 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[D:\软件\apache-activemq-5.16.4\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2022-04-27 10:50:29,893 | INFO  | Page File: D:\软件\apache-activemq-5.16.4\bin\..\data\kahadb\db.data. Recovering pageFile free list due to prior unclean shutdown.. | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2022-04-27 10:50:29,898 | INFO  | Page File: D:\软件\apache-activemq-5.16.4\bin\..\data\kahadb\db.data. Recovered pageFile free list of size: 0 | org.apache.activemq.store.kahadb.disk.page.PageFile | KahaDB Index Free Page Recovery
+2022-04-27 10:50:29,900 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2022-04-27 10:50:29,955 | INFO  | PListStore:[D:\软件\apache-activemq-5.16.4\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-04-27 10:50:30,202 | INFO  | Apache ActiveMQ 5.16.4 (localhost, ID:kezhou3-58452-1651027830063-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2022-04-27 10:50:30,325 | INFO  | Listening for connections at: tcp://kezhou3:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-27 10:50:30,330 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2022-04-27 10:50:30,339 | INFO  | Listening for connections at: amqp://kezhou3:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-27 10:50:30,342 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2022-04-27 10:50:30,356 | INFO  | Listening for connections at: stomp://kezhou3:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-27 10:50:30,361 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2022-04-27 10:50:30,374 | INFO  | Listening for connections at: mqtt://kezhou3:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-04-27 10:50:30,378 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2022-04-27 10:50:30,390 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-04-27 10:50:30,526 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-04-27 10:50:30,760 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@56f0cc85{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2022-04-27 10:50:30,881 | INFO  | Listening for connections at ws://kezhou3:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2022-04-27 10:50:30,883 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2022-04-27 10:50:30,889 | INFO  | Apache ActiveMQ 5.16.4 (localhost, ID:kezhou3-58452-1651027830063-0:1) started | org.apache.activemq.broker.BrokerService | main
+2022-04-27 10:50:30,891 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2022-04-27 10:50:32,413 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-04-27 10:50:32,415 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main

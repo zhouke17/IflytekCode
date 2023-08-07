@@ -1,0 +1,15 @@
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\bin\Debug\NLogWinForm.exe.config
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\bin\Debug\NLogWinForm.exe
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\bin\Debug\NLogWinForm.pdb
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\bin\Debug\NLog.dll
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\bin\Debug\NLog.xml
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.csproj.AssemblyReference.cache
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.Form1.resources
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.Properties.Resources.resources
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.csproj.GenerateResource.cache
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.csproj.CoreCompileInputs.cache
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.csproj.CopyComplete
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.exe
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\obj\Debug\NLogWinForm.pdb
+C:\Users\kezhou3\source\repos\IflytekDaily\NLogWinForm\bin\Debug\NLog.config

@@ -1,0 +1,11 @@
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\bin\Release\ConsoleApp.exe.config
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\bin\Release\ConsoleApp.exe
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\bin\Release\ConsoleApp.pdb
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\bin\Release\Newtonsoft.Json.dll
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\bin\Release\Newtonsoft.Json.xml
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\obj\Release\ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\obj\Release\ConsoleApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\obj\Release\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\obj\Release\ConsoleApp.csproj.CopyComplete
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\obj\Release\ConsoleApp.exe
+C:\Users\kezhou3\source\repos\IflytekDaily\ConsoleApp\obj\Release\ConsoleApp.pdb

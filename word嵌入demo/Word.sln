@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordDemo", "WordDemo\WordDemo.csproj", "{A408EC1E-80CA-4741-BBC2-1FE97FC04FD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iflytek.Court.Office.Core", "iflytek.Court.Office.Core\iflytek.Court.Office.Core.csproj", "{F94A3169-D852-49E1-ADCC-D0250D943669}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A408EC1E-80CA-4741-BBC2-1FE97FC04FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A408EC1E-80CA-4741-BBC2-1FE97FC04FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A408EC1E-80CA-4741-BBC2-1FE97FC04FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A408EC1E-80CA-4741-BBC2-1FE97FC04FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94A3169-D852-49E1-ADCC-D0250D943669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94A3169-D852-49E1-ADCC-D0250D943669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94A3169-D852-49E1-ADCC-D0250D943669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94A3169-D852-49E1-ADCC-D0250D943669}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08D8B9BA-9B71-410D-B372-B560D4BC61A4}
+	EndGlobalSection
+EndGlobal

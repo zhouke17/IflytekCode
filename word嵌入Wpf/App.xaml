@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="WPFApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFApp"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/WPFApp;component/TipBar.xaml">
+                    <SolidColorBrush x:Key="Common.TipBar.Success_Border" Color="#465c1f" />
+                    <SolidColorBrush x:Key="Common.TipBar.Success_Foreground" Color="#81ba38" />
+                    <SolidColorBrush x:Key="Common.TipBar.Success_Background" Color="#E024320b" />
+                    <SolidColorBrush x:Key="Common.TipBar.Info_Border" Color="#1b5090" />
+                    <SolidColorBrush x:Key="Common.TipBar.Info_Foreground" Color="#2f8cfc" />
+                    <SolidColorBrush x:Key="Common.TipBar.Info_Background" Color="#E00b294d" />
+                    <SolidColorBrush x:Key="Common.TipBar.Error_Border" Color="#942d2d" />
+                    <SolidColorBrush x:Key="Common.TipBar.Error_Foreground" Color="#f05757" />
+                    <SolidColorBrush x:Key="Common.TipBar.Error_Background" Color="#E0431313" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

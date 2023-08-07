@@ -1,0 +1,15 @@
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\bin\Debug\CustomControls.dll
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\bin\Debug\CustomControls.pdb
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls.csproj.AssemblyReference.cache
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls_MarkupCompile.cache
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls_MarkupCompile.lref
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\Themes\CornerButton.baml
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\Themes\TipBar.baml
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\Themes\Generic.baml
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls.g.resources
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls.Properties.Resources.resources
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls.csproj.GenerateResource.cache
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls.csproj.CoreCompileInputs.cache
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls.dll
+D:\source\repos\IflytekDaily\WpfTestDemo\Library\UserControls\obj\Debug\CustomControls.pdb

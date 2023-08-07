@@ -1,0 +1,14 @@
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\bin\Debug\iflytek.Court.Client.UserControls.dll
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\bin\Debug\iflytek.Court.Client.UserControls.pdb
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls.csproj.AssemblyReference.cache
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls_MarkupCompile.cache
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls_MarkupCompile.lref
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\Themes\TipBar.baml
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\Themes\Generic.baml
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls.g.resources
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls.Properties.Resources.resources
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls.csproj.GenerateResource.cache
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls.csproj.CoreCompileInputs.cache
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls.dll
+D:\Assistant\Assistant\src\iflytek.Court.Client.UserControls\obj\Debug\iflytek.Court.Client.UserControls.pdb

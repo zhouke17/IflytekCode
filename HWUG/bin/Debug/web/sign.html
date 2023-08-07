@@ -1,0 +1,214 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/sign.css"/>	
+
+
+</head>
+<body onunload="stop()">
+<div class="introduce">
+	<div class="self-intro1">签批控件</div>
+	<div class="self-intro2">全面支持计算机平台</div>
+	<div class="self-intro3">签批控件全面支持中标麒麟，银河麒麟，统信，中科方德等操作系统，与firefox,奇安信,360安全浏览器全面兼容，提供福昕ofd，数科ofd等办公软件墨迹书写功能。笔迹细腻，书写流畅，适用于系统电子化签批应用场景，满足数字化、智能化办公需求。</div>
+<div class="self-intro4"></div>
+<div class="demo">
+	<div class="self-adv-title"> 签 字 演 示<span></span></div>
+	<div class="self-adv">Advantage & Signature</div>
+	<div class="self_form">
+		<div class="form1">
+			<form>
+			  <fieldset>
+				<legend>签字图片</legend>
+				<div style="height:250px;"><img id="pic" src="" alt="" style="width:400px;"/></div>
+			  </fieldset>
+			</form>
+		</div>
+		<div class="form2">
+			<form>
+			  <fieldset >
+				<legend>签字base64流</legend>
+				<div style="height:250px;overflow-y:scroll;word-wrap:break-word;word-break:break-all;" id="base"></div>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="action">
+<button type="button" id="signbeigin" class="begin" onclick="start()" style="width:100px; height:30px;">开始签字</button>
+<button type="button" id="signclose" class="close" onclick="stop()" style="width:100px; height:30px;">结束签字</button>
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript">
+
+	var wsUri = "ws://localhost:12100/pc";
+	var signUrl = "";
+	var isOpenUrl = false;
+	var isMouse = false;
+	var websocket = null;
+	window.onload = initWebSocket();
+
+		function initWebSocket() {
+			btninit();
+                try {
+					checkSocket();
+                    if ( websocket && websocket.readyState == 1 ){
+						console.log("websocket close");
+                        websocket.close();
+					}
+
+                    websocket = new WebSocket( wsUri );
+
+                    websocket.onopen = function (evt) {
+
+                    };
+
+                    websocket.onclose = function (evt) {
+                       
+
+                    };
+                    websocket.onmessage = function (evt) {
+						var obj = JSON.parse(evt.data); 
+						if("signbase64" == obj.typename){						
+						  document.getElementById('pic').src='data:image/jpg;base64,'+obj.message;
+						  document.getElementById('base').innerHTML = obj.message;
+						  var str1="{\"typename\":\"closewindow\"}";
+							websocket.send(str1);
+						}else if("cancel" == obj.typename){
+							alert("取消签字");
+						}else if("unsign" == obj.typename){
+							alert(obj.message);
+						}
+                    };
+                    websocket.onerror = function (evt) {
+                       
+                    };
+                } catch (exception) {
+                   
+                }
+            }
+
+			function stopWebSocket() {
+				if ( websocket != null )
+				{
+					websocket.close();
+				}
+                    
+            }
+
+            function checkSocket() {
+                if (websocket != null) {
+                    var stateStr;
+                    switch (websocket.readyState) {
+                        case 0: {
+                            stateStr = "CONNECTING";
+                            break;
+                        }
+                        case 1: {
+                            stateStr = "OPEN";
+                            break;
+                        }
+                        case 2: {
+                            stateStr = "CLOSING";
+                            break;
+                        }
+                        case 3: {
+                            stateStr = "CLOSED";
+                            break;
+                        }
+                        default: {
+                            stateStr = "UNKNOW";
+                            break;
+                        }
+                    }
+                    console.log("WebSocket state = " + websocket.readyState + " ( " + stateStr + " )");
+                } else {
+                    console.log("WebSocket is null");
+                }
+            }
+
+       
+		function start()
+		{				  
+		    if ( websocket != null )
+		    {
+				var str1="{\"typename\":\"extendurl\",\"message\":{\"url\":\""+signUrl+"\"}}";
+		
+			    websocket.send(str1);
+				var str1 = "{\"typename\":\"startsign\",\"message\":{\"left\":\""+240+"\",\"top\":\""+200+"\",\"width\":\""+600+"\",\"height\":\""+300+"\",\"penwidth\":\""+5+"\"}}";
+		       
+			    websocket.send(str1);
+			   
+			   	str1="{\"typename\": \"mouseenable\",\"message\": {\"mod\": \"1\"}}";
+					
+				websocket.send(str1);
+
+		    }
+			
+			var begin = document.getElementById("signbeigin");
+			begin.disabled=true;
+			begin.style.background="linear-gradient(to bottom, #A9A9A9 0%,#A9A9A9 100%)"
+			begin.style.border="0.2px solid #A9A9A9"
+
+			var close = document.getElementById("signclose");
+			close.disabled=false;
+			close.style.background="linear-gradient(to bottom, #A50A0A 0%,#A50A0A 100%)"
+			close.style.border="0.2px solid #A50A0A"
+			isOpenUrl = true;
+
+		}
+
+		function stop(){		  
+			if ( websocket != null && isOpenUrl){
+				
+				var str1="{\"typename\": \"mouseenable\",\"message\": {\"mod\": \"0\"}}";
+				websocket.send(str1);
+				
+				str1="{\"typename\":\"closeurl\",\"message\":{\"url\":\""+signUrl+"\"}}";
+				websocket.send(str1);
+				
+				str1="{\"typename\":\"closewindow\"}";
+		        websocket.send(str1);
+				isOpenUrl = false;
+			}
+
+			var begin = document.getElementById("signbeigin");
+			begin.disabled=false;
+			begin.style.background="linear-gradient(to bottom, #A50A0A 0%,#A50A0A 100%)"
+			begin.style.border="0.2px solid #A50A0A"
+
+			var close = document.getElementById("signclose");
+			close.disabled=true;
+			close.style.background="linear-gradient(to bottom, #A9A9A9 0%,#A9A9A9 100%)"
+			close.style.border="0.2px solid #A9A9A9"
+
+		}
+
+    function btninit(){
+		var begin = document.getElementById("signbeigin");
+		console.log(begin);
+		begin.disabled=false;
+		var close = document.getElementById("signclose");
+		close.disabled=true;
+		// 查找签字页面URl
+		 if(location.href.indexOf("file:") == 0){
+			signUrl = location.href.replace("sign.html","law.html");
+		 }else{
+			if(location.href.indexOf("sign") != -1){
+			   signUrl = location.href.replace("sign.html","law.html");
+			}else{
+			   signUrl = location.href+"law.html";
+			}
+		 }
+	}
+
+    </script>
+
+</html>
+
+
+

@@ -1,0 +1,15 @@
+C:\Users\kezhou3\source\repos\HWUG\bin\Debug\HWUG.exe
+C:\Users\kezhou3\source\repos\HWUG\bin\Debug\HWUG.pdb
+C:\Users\kezhou3\source\repos\HWUG\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kezhou3\source\repos\HWUG\bin\Debug\websocket-sharp.dll
+C:\Users\kezhou3\source\repos\HWUG\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kezhou3\source\repos\HWUG\bin\Debug\websocket-sharp.xml
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.csproj.AssemblyReference.cache
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.Form1.resources
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.JYKJForm.resources
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.Properties.Resources.resources
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.csproj.GenerateResource.cache
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.csproj.CoreCompileInputs.cache
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.csproj.CopyComplete
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.exe
+C:\Users\kezhou3\source\repos\HWUG\obj\Debug\HWUG.pdb

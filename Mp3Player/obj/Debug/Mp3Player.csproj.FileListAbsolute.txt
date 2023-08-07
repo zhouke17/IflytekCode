@@ -1,0 +1,9 @@
+C:\Users\kezhou3\source\repos\Mp3Player\bin\Debug\Mp3Player.exe
+C:\Users\kezhou3\source\repos\Mp3Player\bin\Debug\Mp3Player.pdb
+C:\Users\kezhou3\source\repos\Mp3Player\obj\Debug\Mp3Player.csproj.AssemblyReference.cache
+C:\Users\kezhou3\source\repos\Mp3Player\obj\Debug\Mp3Player.Player.resources
+C:\Users\kezhou3\source\repos\Mp3Player\obj\Debug\Mp3Player.Properties.Resources.resources
+C:\Users\kezhou3\source\repos\Mp3Player\obj\Debug\Mp3Player.csproj.GenerateResource.cache
+C:\Users\kezhou3\source\repos\Mp3Player\obj\Debug\Mp3Player.csproj.CoreCompileInputs.cache
+C:\Users\kezhou3\source\repos\Mp3Player\obj\Debug\Mp3Player.exe
+C:\Users\kezhou3\source\repos\Mp3Player\obj\Debug\Mp3Player.pdb

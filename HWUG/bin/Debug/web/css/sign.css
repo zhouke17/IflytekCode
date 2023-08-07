@@ -1,0 +1,328 @@
+
+.introduce 
+	{
+		background-color: rgb(0,0,0);
+		height: 400px;
+	}
+.self-intro1
+	{
+		position: relative;
+		top: 30px;
+		left: 10%;
+		font-family: sans-serif;
+		color: white;
+		font-size: 60px;
+		width:70%;
+	}
+.self-intro2
+	{
+		position: relative;
+		top: 50px;
+		left: 10%;
+		font-family: sans-serif;
+		color: white;
+		font-size: 20px;
+		width:90%;
+	}
+.self-intro3
+	{
+		position: relative;
+		top: 90px;
+		left: 10%;
+		font-family: sans-serif;
+		color: white;
+		font-size: 15px;
+		width: 500px;
+		line-height:  3em;
+	}
+.self-intro4
+	{
+		position: absolute;
+		top: 0px;
+		left: 60%;
+        background-image: url(../image/product.png);
+		width: 500px;
+		height: 400px;
+		background-repeat: no-repeat；
+		background-size: 20% 20%;  
+		background-size: cover;
+	}
+.advantage
+	{
+		position: relative;
+		background-color: rgb(255,255,255);
+		height: 40%; 
+	}
+.self-adv-title
+	{
+		position: relative;
+		top: 10px;
+		left: 45%;
+		font-family: sans-serif;
+		color: black;
+		font-size: 30px;
+		width: 170px;
+	    text-align: justify;
+	}
+.self-adv-title > span { display: inline-block /* Opera */; padding-left: 100%; }
+.self-adv
+	{
+		position: relative;
+		top: 15px;
+		left: 45%;
+		font-family: sans-serif;
+		color: black;
+		width: 180px;
+	    text-align: justify;
+	}
+.self-adv > span { display: inline-block /* Opera */; padding-left: 100%; }
+.system
+	{
+		float: left;
+		position: relative;
+		top: 20px;
+		background-color: rgb(233,239,237);
+		width: 25%;
+		height: 350px;  
+	}
+.system-icon
+	{
+		position: relative;
+		top: 20px;
+		left: 43%;
+		background-image: url(../image/linux.png);
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat；
+		background-size: 50% 50%;  
+		background-size: cover;		
+	}
+.system-adv,.cpu-adv,.browser-adv,.office-adv
+	{
+		position: relative;
+		top: 35px;
+		left: 28%;
+		font-family: sans-serif;
+		color: black;
+		font-size: 15px;
+		width: 160px;
+	    text-align: justify;
+		font-weight: bold;
+	}
+.system-adv > span { display: inline-block /* Opera */; padding-left: 100%; }	
+.system-image
+	{
+		position: relative;
+		top: 45px;
+		left: 8%;
+		background-image: url(../image/system-image.png);
+		width: 320px;
+		height: 250px;
+		background-repeat: no-repeat；
+		background-size: 20% 20%;  
+		background-size: cover;		
+	}
+
+.cpu
+	{
+		float: left;
+		position: relative;
+		top: 20px;
+		background-color: rgb(213,224,221);
+		width: 25%;
+		height: 350px;  	
+	}
+.cpu-icon
+	{
+		position: relative;
+		top: 20px;
+		left: 43%;
+		background-image: url(../image/cpu.png);
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat；
+		background-size: 50% 50%;  
+		background-size: cover;		
+	}
+.cpu-adv
+	{
+		position: relative;
+		top: 35px;
+		left: 35%;
+		font-family: sans-serif;
+		color: black;
+		font-size: 15px;
+		width: 160px;
+	    text-align: justify;
+		font-weight: bold;
+	}
+.system-adv > span { display: inline-block /* Opera */; padding-left: 100%; }	
+
+.cpu-image
+	{
+		position: relative;
+		top: 45px;
+		left: 20%;
+		background-image: url(../image/cpu-image.png);
+		width: 240px;
+		height: 240px;
+		background-repeat: no-repeat；
+		background-size: 10% 10%;  
+		background-size: cover;		
+	}
+.browser
+	{
+		float: left;
+		position: relative;
+		top: 20px;
+		background-color: rgb(202,206,206);
+		width: 25%;
+		height: 350px;  
+	}
+.browser-icon
+	{
+		position: relative;
+		top: 20px;
+		left: 43%;
+		background-image: url(../image/browser.png);
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat；
+		background-size: 50% 50%;  
+		background-size: cover;		
+	}
+.browser-adv
+	{
+		position: relative;
+		top: 35px;
+		left: 29%;
+		font-family: sans-serif;
+		color: black;
+		font-size: 15px;
+		width: 160px;
+	    text-align: justify;
+		font-weight: bold;
+	}
+.system-adv > span { display: inline-block /* Opera */; padding-left: 100%; }
+.browser-image
+	{
+		position: relative;
+		top: 45px;
+		left: 5%;
+		background-image: url(../image/browser-image.png);
+		width: 320px;
+		height: 240px;
+		background-repeat: no-repeat；
+		background-size: 10% 10%;  
+		background-size: cover;		
+	}
+.office
+	{
+		float: left;
+		position: relative;
+		top: 20px;
+		background-color: rgb(175,182,182);
+		width: 25%;
+		height: 350px;  
+	}
+.office-icon
+	{
+		position: relative;
+		top: 20px;
+		left: 43%;
+		background-image: url(../image/office.png);
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat；
+		background-size: 50% 50%;  
+		background-size: cover;		
+	}
+.office-adv
+	{
+		position: relative;
+		top: 35px;
+		left: 29%;
+		font-family: sans-serif;
+		color: black;
+		font-size: 15px;
+		width: 160px;
+	    text-align: justify;
+		font-weight: bold;
+	}
+.system-adv > span { display: inline-block /* Opera */; padding-left: 100%; }
+.office-image
+	{
+		position: relative;
+		top: 60px;
+		left: 13%;
+		background-image: url(../image/office-image.png);
+		width: 300px;
+		height: 200px;
+		background-repeat: no-repeat；
+		background-size: 10% 10%;  
+		background-size: cover;		
+	}
+.demo
+	{
+		position: relative;
+		background-color: rgb(255,255,255);
+		height: 20%;
+		margin-top: 100px;
+	}
+.self_form
+	{
+		position: relative;
+		background-color: rgb(255,255,205);
+		top: 20px;
+		width: 100%;
+		height: 300px; 
+	}
+.form1
+	{
+		float: left;
+		position: relative;
+		top: 5px;
+		width: 50%;
+		height: 300px; 
+	}
+.form2
+	{
+		float: left;
+		position: relative;
+		top: 5px;
+		width: 50%;
+		height: 300px; 
+
+	}
+.action
+	{
+		position: relative;
+		margin-left: 43%;
+		top:30px;
+		height: 20%;
+	}
+.begin {
+     line-height:100%;
+     padding:0.3em;
+     margin:2px;
+     vertical-align:text-bottom;
+     border-radius:50px;
+     color:#fefee9;
+     border:0.2px solid #A50A0A;
+     background: linear-gradient(to bottom, #A50A0A 0%,#A50A0A 100%);
+}
+
+
+.close {
+     line-height:100%;
+     padding:0.3em;
+     margin:2px;
+     vertical-align:text-bottom;
+     border-radius:50px;
+     color:#fefee9;
+     border:0.2px solid #A9A9A9;
+     background: linear-gradient(to bottom, #A9A9A9 0%,#A9A9A9 100%);
+}
+ 
+
+

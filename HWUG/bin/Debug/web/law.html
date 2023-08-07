@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title>电子签名法</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/pageturning.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/law.css"/>	
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/pageturning.js"></script>
+ 	<script language="javascript" type="text/javascript">
+		var wsUri = "ws://127.0.0.1:12100/sign";
+        var websocket;
+
+		function sendMessage() {
+               
+                if ( websocket != null )
+                {
+ 
+				    var buttonInfo = getButtonsInfo();
+									
+					var str1 = "{\"typename\":\"registerbtn\",\"message\":["+buttonInfo+"\]}";
+					
+					websocket.send(str1);
+                }
+            }
+
+        function initWebSocket() {
+			pageInit();	
+        try {
+            if (typeof MozWebSocket == 'function')
+                    WebSocket = MozWebSocket;
+
+                if ( websocket && websocket.readyState == 1 )
+                    websocket.close();
+                websocket = new WebSocket( wsUri );
+                websocket.onopen = function (evt) {
+                       sendMessage();
+                };
+                websocket.onclose = function (evt) {
+                    
+                };
+                websocket.onmessage = function (evt) {
+                    console.log( "Message received :", evt.data );
+                    	
+					var obj = JSON.parse(evt.data); 
+					if("signbase64" == obj.typename){	
+						document.getElementById('signImage').src='data:image/jpg;base64,'+obj.message;
+					}else if("response" == obj.typename){
+						if(obj.message == "201"){
+							pageUp();
+						}else if(obj.message == "202"){
+							pageDown();
+						}
+					}else if(obj.typename=="fingerbase64"){
+
+						document.getElementById('signImage').src='data:image/jpg;base64,'+ obj.message;
+						document.getElementById('signImage').style="width:100px;";
+					}else if("Error" == obj.typename){
+						alert(obj.message);
+					}else if(obj.typename=="signfbase64"){
+						document.getElementById('signImage').src='data:image/jpg;base64,'+ obj.message;
+						document.getElementById('signImage').style="width:200px;";
+					}
+                };
+                websocket.onerror = function (evt) {
+                    console.log('ERROR: ' + evt.data);
+                };
+            } catch (exception) {
+                console.log('ERROR: ' + exception);
+            }
+        }
+
+    </script>
+  </head>
+  <body onload="initWebSocket()">
+	  <button id="pageup" onclick="pageUp();">上一页</button>
+	  <button id="pagedown" onclick="pageDown();">下一页</button>
+	<div id="frameContent" class="frameContent">
+      <div class="con_bgtiao">
+        <div class="con_bt">中华人民共和国电子签名法</div>
+      </div>
+      <div id="content" class="con">
+        <p>
+          <span>
+            <span style="font-family: 楷体, 楷体_GB2312, SimKai;">　　(2004年8月28日第十届全国人民代表大会常务委员会第十一次会议通过　根据2015年4月24日第十二届全国人民代表大会常务委员会第十四次会议《关于修改〈中华人民共和国电力法〉等六部法律的决定》第一次修正　根据2019年4月23日第十三届全国人民代表大会常务委员会第十次会议《关于修改〈中华人民共和国建筑法〉等八部法律的决定》第二次修正)</span>
+          </span>
+        </p>
+        <p style="text-align: center;">
+          <strong>目　　录</strong>
+        </p>
+        <p>　　第一章　总　　则</p>
+        <p>　　第二章　数据电文</p>
+        <p>　　第三章　电子签名与认证</p>
+        <p>　　第四章　法律责任</p>
+        <p>　　第五章　附　　则</p>
+        <p style="text-align: center;">
+          <strong>第一章　总　　则</strong>
+        </p>
+        <p>　　 
+        <strong>第一条</strong>　为了规范电子签名行为，确立电子签名的法律效力，维护有关各方的合法权益，制定本法。</p>
+        <p>　　 
+        <strong>第二条</strong>　本法所称电子签名，是指数据电文中以电子形式所含、所附用于识别签名人身份并表明签名人认可其中内容的数据。</p>
+        <p>
+        　　本法所称数据电文，是指以电子、光学、磁或者类似手段生成、发送、接收或者储存的信息。</p>
+        <p>　 
+        <strong>　第三条</strong>　民事活动中的合同或者其他文件、单证等文书，当事人可以约定使用或者不使用电子签名、数据电文。</p>
+        <p>
+        　　当事人约定使用电子签名、数据电文的文书，不得仅因为其采用电子签名、数据电文的形式而否定其法律效力。</p>
+        <p>　　前款规定不适用下列文书：</p>
+        <p>　　(一)涉及婚姻、收养、继承等人身关系的;</p>
+        <p>　　(二)涉及停止供水、供热、供气等公用事业服务的;</p>
+        <p>　　(三)法律、行政法规规定的不适用电子文书的其他情形。</p>
+        <p style="text-align: center;">
+          <strong>第二章　数据电文</strong>
+        </p>
+        <p>　　 
+        <strong>第四条</strong>　能够有形地表现所载内容，并可以随时调取查用的数据电文，视为符合法律、法规要求的书面形式。</p>
+        <p>　　 
+        <strong>第五条</strong>　符合下列条件的数据电文，视为满足法律、法规规定的原件形式要求：</p>
+        <p>　　(一)能够有效地表现所载内容并可供随时调取查用;</p>
+        <p>
+        　　(二)能够可靠地保证自最终形成时起，内容保持完整、未被更改。但是，在数据电文上增加背书以及数据交换、储存和显示过程中发生的形式变化不影响数据电文的完整性。</p>
+        <p>　 
+        <strong>　第六条　</strong>符合下列条件的数据电文，视为满足法律、法规规定的文件保存要求：</p>
+        <p>　　(一)能够有效地表现所载内容并可供随时调取查用;</p>
+        <p>
+        　　(二)数据电文的格式与其生成、发送或者接收时的格式相同，或者格式不相同但是能够准确表现原来生成、发送或者接收的内容;</p>
+        <p>　　(三)能够识别数据电文的发件人、收件人以及发送、接收的时间。</p>
+        <p>　 
+        <strong>　第七条</strong>　数据电文不得仅因为其是以电子、光学、磁或者类似手段生成、发送、接收或者储存的而被拒绝作为证据使用。</p>
+        <p>　　 
+        <strong>第八条</strong>　审查数据电文作为证据的真实性，应当考虑以下因素：</p>
+        <p>　　(一)生成、储存或者传递数据电文方法的可靠性;</p>
+        <p>　　(二)保持内容完整性方法的可靠性;</p>
+        <p>　　(三)用以鉴别发件人方法的可靠性;</p>
+        <p>　　(四)其他相关因素。</p>
+        <p style="text-align: center;">
+          <strong>第三章　电子签名与认证</strong>
+        </p>
+        <p>　 
+        <strong>　第十三条</strong>　电子签名同时符合下列条件的，视为可靠的电子签名：</p>
+        <p>　　(一)电子签名制作数据用于电子签名时，属于电子签名人专有;</p>
+        <p>　　(二)签署时电子签名制作数据仅由电子签名人控制;</p>
+        <p>　　(三)签署后对电子签名的任何改动能够被发现;</p>
+        <p>　　(四)签署后对数据电文内容和形式的任何改动能够被发现。</p>
+        <p>　　当事人也可以选择使用符合其约定的可靠条件的电子签名。</p>
+        <p>　 
+        <strong>　第十四条</strong>　可靠的电子签名与手写签名或者盖章具有同等的法律效力。</p> 
+		<p style="text-align: center;">
+          <strong>第四章　法律责任</strong>
+        </p>
+        <p>　 
+        <strong>　第二十七条</strong>　电子签名人知悉电子签名制作数据已经失密或者可能已经失密未及时告知有关各方、并终止使用电子签名制作数据，未向电子认证服务提供者提供真实、完整和准确的信息，或者有其他过错，给电子签名依赖方、电子认证服务提供者造成损失的，承担赔偿责任。</p>
+        <p>
+        <strong>　　第二十八条　</strong>电子签名人或者电子签名依赖方因依据电子认证服务提供者提供的电子签名认证服务从事民事活动遭受损失，电子认证服务提供者不能证明自己无过错的，承担赔偿责任。</p>
+        <p>　 
+        <strong>　第二十九条</strong>　未经许可提供电子认证服务的，由国务院信息产业主管部门责令停止违法行为;有违法所得的，没收违法所得;违法所得三十万元以上的，处违法所得一倍以上三倍以下的罚款;没有违法所得或者违法所得不足三十万元的，处十万元以上三十万元以下的罚款。</p>
+
+        <p style="text-align: center;">
+          <strong>第五章　附　　则</strong>
+        </p>
+        <p>　　 
+        <strong>第三十四条</strong>　本法中下列用语的含义：</p>
+        <p>
+        　　(一)电子签名人，是指持有电子签名制作数据并以本人身份或者以其所代表的人的名义实施电子签名的人;</p>
+        <p>
+        　　(二)电子签名依赖方，是指基于对电子签名认证证书或者电子签名的信赖从事有关活动的人;</p>
+        <p>
+        　　(三)电子签名认证证书，是指可证实电子签名人与电子签名制作数据有联系的数据电文或者其他电子记录;</p>
+        <p>
+        　　(四)电子签名制作数据，是指在电子签名过程中使用的，将电子签名与电子签名人可靠地联系起来的字符、编码等数据;</p>
+        <p>
+        　　(五)电子签名验证数据，是指用于验证电子签名的数据，包括代码、口令、算法或者公钥等。</p>
+        <p>　　 
+        <strong>第三十五条</strong>　国务院或者国务院规定的部门可以依据本法制定政务活动和其他社会活动中使用电子签名、数据电文的具体办法。</p>
+        <p>　　 
+        <strong>第三十六条</strong>　本法自2005年4月1日起施行。</p>
+      </div>
+      <div class="sign_bgtiao">
+		<div class="timer" style="position: relative;float:left;left:28px;line-height:60px;width:40%;"> 
+			<i style="font-size:20px; Font Family:Courier New;">签 发 日 期:</i>&nbsp;&nbsp;
+			<i><b><u>2015-02-11</u></b></i>
+		</div>
+		<div class="signer" style="	float:left; position: relative;left:200px;line-height:60px;width:10%;">
+			<i style="font-size:20px; Font Family:Courier New;">签 发 人:</i>&nbsp;&nbsp;
+		</div>
+		  <div style="	float:left;margin-left:160px;width:200px;height:100px;margin-top:-40px;">
+				<image id="signImage" style="width:200px; border:0;border-style:none; " src=""/>
+		  </div>		
+      </div>
+</div>
+  </body>
+</html>

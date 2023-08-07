@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/sign.css"/>
+</head>
+<body onunload="stop()">
+<div class="introduce">
+	<div class="self-intro1">签批控件</div>
+	<div class="self-intro2">全面支持计算机平台</div>
+	<div class="self-intro3">签批控件全面支持中标麒麟，银河麒麟，统信，中科方德等操作系统，与firefox,奇安信,360安全浏览器全面兼容，提供福昕ofd，数科ofd等办公软件墨迹书写功能。笔迹细腻，书写流畅，适用于系统电子化签批应用场景，满足数字化、智能化办公需求。</div>
+  <div class="self-intro4"></div>
+  <div class="demo">
+
+	<div class="self-adv-title"> 指 纹 采 集<span></span></div>
+	<div class="self-adv">Advantage & Finger</div>
+	<div class="self_form">
+		<div class="form1">
+			<form>
+			  <fieldset>
+				<legend>指纹图片</legend>
+				<div style="height:250px;"><img id="pic" src="" alt=""/></div>
+			  </fieldset>
+			</form>
+		</div>
+		<div class="form2">
+			<form>
+			  <fieldset >
+				<legend>指纹Base64</legend>
+				<div style="height:250px;overflow-y:scroll;word-wrap:break-word;word-break:break-all;" id="base"></div>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+  <div class="action">
+	<button type="button" id="fingerbeigin" class="begin" onclick="start()" style="width:100px; height:30px;">开始采集</button>
+	<button type="button" id="close" class="close" onclick="stop()" style="width:100px; height:30px;">结束/取消</button>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript">
+
+    var wsUri = "ws://127.0.0.1:12100/pc";
+	var websocket = null;
+	window.onload = initWebSocket;
+	var signFUrl = "";
+	function initWebSocket() {
+		initUrl();
+		btninit();
+			try {
+				checkSocket();
+				if ( websocket && websocket.readyState == 1 ){
+					console.log("websocket close");
+					websocket.close();
+				}
+
+				websocket = new WebSocket( wsUri );
+
+				websocket.onopen = function (evt) {
+					console.log("sign webSocket success");
+				};
+
+				websocket.onclose = function (evt) {
+
+
+				};
+				websocket.onmessage = function (evt) {
+					//var str = evt.data.replace(/\\/g,'/');
+					var obj = JSON.parse(evt.data);
+					switch(obj.typename){
+						case "fingerbase64":
+						   
+							  document.getElementById('pic').src='data:image/jpg;base64,'+obj.message;
+							  document.getElementById('base').innerHTML = obj.message;
+							  var str1="{\"typename\":\"closewindow\"}";
+								websocket.send(str1);
+							break;
+						case "error":
+							alert(obj.message);
+							break;
+						case "cancel":
+						    alert("取消采集");
+							break;
+					}
+				};
+				websocket.onerror = function (evt) {
+
+				};
+			} catch (exception) {
+
+			}
+		}
+
+		function stopWebSocket() {
+			if ( websocket != null )
+			{
+				websocket.close();
+			}
+		}
+
+		function checkSocket() {
+			if (websocket != null) {
+				var stateStr;
+				switch (websocket.readyState) {
+					case 0: {
+						stateStr = "CONNECTING";
+						break;
+					}
+					case 1: {
+						stateStr = "OPEN";
+						break;
+					}
+					case 2: {
+						stateStr = "CLOSING";
+						break;
+					}
+					case 3: {
+						stateStr = "CLOSED";
+						break;
+					}
+					default: {
+						stateStr = "UNKNOW";
+						break;
+					}
+				}
+				console.log("WebSocket state = " + websocket.readyState + " ( " + stateStr + " )");
+			} else {
+				console.log("WebSocket is null");
+			}
+		}
+
+	function start(){
+		if ( websocket != null )
+		{
+			var str1="{\"typename\":\"extendurl\",\"message\":{\"url\":\""+signFUrl+"\"}}";
+				
+			websocket.send(str1);
+			var str1="{\"typename\":\"startfinger\",\"message\":{\"left\":\""+340+"\",\"top\":\""+250+"\",\"width\":\""+600+"\",\"height\":\""+300
+					+"\",\"quality\":\""+100+"\",\"flag\":\""+0+"\"}}";
+			websocket.send(str1);
+		}
+
+		var begin = document.getElementById("fingerbeigin");
+		begin.disabled=true;
+		begin.style.background="linear-gradient(to bottom, #A9A9A9 0%,#A9A9A9 100%)";
+		begin.style.border="0.2px solid #A9A9A9"
+
+		var close = document.getElementById("close");
+		close.disabled=false;
+		close.style.background="linear-gradient(to bottom, #A50A0A 0%,#A50A0A 100%)";
+		close.style.border="0.2px solid #A50A0A";
+	}
+
+	function stop(){
+		if ( websocket != null){
+		
+			var str1="{\"typename\": \"mouseenable\",\"message\": {\"mod\": \"0\"}}";					
+			websocket.send(str1);
+			
+			var str1="{\"typename\":\"closewindow\"}";
+			websocket.send(str1);
+			str1="{\"typename\":\"closeurl\",\"message\":{\"url\":\""+signFUrl+"\"}}";
+		
+			websocket.send(str1);
+		}
+		btninit();
+	}
+
+    function btninit(){
+		var begin = document.getElementById("fingerbeigin");
+		begin.disabled=false;
+		begin.style.background="linear-gradient(to bottom, #A50A0A 0%,#A50A0A 100%)";
+		begin.style.border="0.2px solid #A50A0A";
+
+		var close = document.getElementById("close");
+		close.disabled=true;
+		close.style.background="linear-gradient(to bottom, #A9A9A9 0%,#A9A9A9 100%)";
+		close.style.border="0.2px solid #A9A9A9";
+	}
+	
+    function initUrl(){
+		// 查找签字页面URl
+		 if(location.href.indexOf("file:") == 0){
+			signFUrl = location.href.replace("finger.html","law.html");
+		 }else{
+			if(location.href.indexOf("index") != -1){
+			   signFUrl = location.href.replace("fingner.html","law.html");
+			}else{
+			   signFUrl = location.href+"law.html";
+			}
+		 }
+	}
+    </script>
+</html>
+
+
+

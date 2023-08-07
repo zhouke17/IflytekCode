@@ -1,0 +1,14 @@
+{
+   "version":"2.2.0.0",
+   "url":"http://172.31.97.233:88/group1/M00/07/70/rB9h6WNrNQuAaizRAAWknkYIuyE661.zip",
+   "changelog":"https://github.com/ravibpatel/AutoUpdater.NET/releases",
+   "mandatory":{
+      "value":true,
+      "minVersion": "2.0.0.0",
+      "mode":1
+   },
+   "checksum":{
+      "value":"21cbb8c0ecbf523b8d75004540b79ccc",
+      "hashingAlgorithm":"MD5"
+   }
+}

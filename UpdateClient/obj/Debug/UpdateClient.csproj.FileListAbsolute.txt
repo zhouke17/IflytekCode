@@ -1,0 +1,15 @@
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\UpdateClient.exe
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\UpdateClient.pdb
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\AutoUpdater.NET.dll
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\AutoUpdater.NET.pdb
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\AutoUpdater.NET.xml
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kezhou3\source\repos\UpdateClient\obj\Debug\UpdateClient.Form1.resources
+C:\Users\kezhou3\source\repos\UpdateClient\obj\Debug\UpdateClient.Properties.Resources.resources
+C:\Users\kezhou3\source\repos\UpdateClient\obj\Debug\UpdateClient.csproj.GenerateResource.cache
+C:\Users\kezhou3\source\repos\UpdateClient\obj\Debug\UpdateClient.csproj.CoreCompileInputs.cache
+C:\Users\kezhou3\source\repos\UpdateClient\obj\Debug\UpdateClient.csproj.CopyComplete
+C:\Users\kezhou3\source\repos\UpdateClient\obj\Debug\UpdateClient.exe
+C:\Users\kezhou3\source\repos\UpdateClient\obj\Debug\UpdateClient.pdb
+C:\Users\kezhou3\source\repos\UpdateClient\bin\Debug\UpdateClient.exe.config

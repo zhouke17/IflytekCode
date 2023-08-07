@@ -1,0 +1,18 @@
+2022年11月9日 17:21:16
+
+ZipExtractor started with following command line arguments.
+[0] c:\users\kezhou3\source\repos\iflytekdaily\winformsapp\bin\debug\net6.0-windows\autoupdaterdotnetdownload\zipextractor.exe
+[1] --input
+[2] c:\users\kezhou3\source\repos\iflytekdaily\winformsapp\bin\debug\net6.0-windows\autoupdaterdotnetdownload/rb9h6wnrnquaaizraawknkyiuye661.zip
+[3] --output
+[4] c:\users\kezhou3\source\repos\iflytekdaily\winformsapp\bin\debug\net6.0-windows
+[5] --executable
+[6] c:\users\kezhou3\source\repos\iflytekdaily\winformsapp\bin\debug\net6.0-windows\winformsapp.exe
+
+BackgroundWorker started successfully.
+Found total of 2 files and folders inside the zip file.
+Extracting Ghelper-v2.6.2.crx [50%]
+Extracting Ghelper瀹夎璇存槑銆倀xt [100%]
+Successfully launched the updated application.
+
+

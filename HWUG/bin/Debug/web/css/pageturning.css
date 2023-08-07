@@ -1,0 +1,51 @@
+body
+	{
+		overflow-y:hidden;
+		overflow-x:hidden;
+	}
+
+	
+	.frameContent
+	{
+		width:100%; /*调整显示区的宽*/
+		height:780px; /*调整显示区的高*/
+		overflow-pageINdex:hidden;
+		overflow:hidden;
+		word-break:break-all;
+	}
+
+	
+	.page_up
+	{		
+		position:absolute;
+		width:100px;
+		height:40px;
+		margin-right:0px;
+		margin-top:0px;
+		bottom:60px;
+		border:solid 2px #4d4e53;
+		border-radius:10px 10px 10px 10px;
+		text-align: center;  
+		line-height:40px;
+		font-size:20px;		
+        font-weight: 800; 
+		color:#FFFFFF;
+		background-color:#B0C4DE;
+	}
+
+	.page_down 
+	{		
+		position:absolute;
+		width:100px;
+		height:40px;
+		margin-right:0px;
+		margin-top:60px;
+		border:solid 2px #4d4e53;
+		border-radius:10px 10px 10px 10px;
+		text-align: center;  
+		line-height:40px;
+		font-size:20px;		
+        font-weight: 800; 
+		color:#FFFFFF;
+		background-color:#B0C4DE;
+	}

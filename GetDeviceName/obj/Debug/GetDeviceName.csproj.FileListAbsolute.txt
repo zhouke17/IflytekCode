@@ -1,0 +1,6 @@
+C:\Users\kezhou3\source\repos\GetDeviceName\bin\Debug\GetDeviceName.exe
+C:\Users\kezhou3\source\repos\GetDeviceName\bin\Debug\GetDeviceName.pdb
+C:\Users\kezhou3\source\repos\GetDeviceName\obj\Debug\GetDeviceName.csproj.AssemblyReference.cache
+C:\Users\kezhou3\source\repos\GetDeviceName\obj\Debug\GetDeviceName.csproj.CoreCompileInputs.cache
+C:\Users\kezhou3\source\repos\GetDeviceName\obj\Debug\GetDeviceName.exe
+C:\Users\kezhou3\source\repos\GetDeviceName\obj\Debug\GetDeviceName.pdb
